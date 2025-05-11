@@ -66,7 +66,7 @@ function Blog() {
       date: "15 de Mayo, 2025",
       excerpt: "Una hermosa celebración donde homenajeamos a todas las madres de nuestra casa...",
       description: "Celebración día de las madres con flores y decoración",
-      imageSrc: Imagen1 
+      imageSrc: "https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/addc31b077211c815ff27093852e1b4c.jpg" 
     },
     {
       id: 2,
@@ -74,7 +74,7 @@ function Blog() {
       date: "10 de Mayo, 2025",
       excerpt: "Nuestros abuelos aprendieron nuevas técnicas de tejido en un ambiente divertido...",
       description: "Grupo de adultos mayores aprendiendo a tejer",
-      imageSrc: Imagen2
+      imageSrc: "https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/41eefde62741a36abca36d7be5deed34.jpg"
     },
     {
       id: 3,
@@ -82,7 +82,7 @@ function Blog() {
       date: "5 de Mayo, 2025",
       excerpt: "Una maravillosa experiencia en contacto con la naturaleza...",
       description: "Grupo de adultos mayores disfrutando de un día en el parque",
-      imageSrc: Imagen3
+      imageSrc: "https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/6cc3c8121ed7ff12af06047851cff0e9.jpg"
     }
   ];
 
