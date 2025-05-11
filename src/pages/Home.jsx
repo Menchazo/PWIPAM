@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useToast } from "@/components/ui/use-toast";
+import InstagramFeed from "@/components/InstagramFeed";
 
 function Home() {
   const { toast } = useToast();
@@ -16,55 +17,74 @@ function Home() {
   const handleAddEvent = (e) => {
     e.preventDefault();
     if (newEvent.title && newEvent.date) {
-      setEvents([...events, { id: Date.now(), ...newEvent }]);
+      const newEventObject = { id: Date.now(), ...newEvent };
+      const updatedEvents = [newEventObject, ...events];
+      setEvents(updatedEvents);
+      localStorage.setItem('events', JSON.stringify(updatedEvents));
       setNewEvent({ title: "", date: "" });
       toast({
         title: "¡Evento agregado!",
         description: "El evento ha sido agregado exitosamente.",
+        variant: "success"
+      });
+       document.getElementById('addEventForm').classList.add('hidden')
+    } else {
+       toast({
+        title: "Error",
+        description: "Por favor completa todos los campos.",
+        variant: "destructive",
       });
     }
   };
+  
+  useState(() => {
+    const storedEvents = localStorage.getItem('events');
+    if (storedEvents) {
+      setEvents(JSON.parse(storedEvents));
+    }
+  }, []);
+
 
   return (
     <div>
-      <section className="mb-12 relative">
-        <img  alt="Banner principal" className="w-full h-64 object-cover rounded-xl mb-8" src="https://images.unsplash.com/photo-1633265633926-a3c31dce9a6d" />
+      <section className="mb-12 relative pt-8">
+        <img alt="Reunión en la Casa de los Abuelos Angelica Alvarado" className="w-full h-72 object-cover rounded-xl mb-8 shadow-lg" src="https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/d49be3a4aa19956c510194aed1521f53.jpg" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white/90 backdrop-blur-sm rounded-lg shadow-xl p-6 mb-8 absolute bottom-0 left-0 right-0 mx-4"
+          className="bg-white/90 backdrop-blur-sm rounded-lg shadow-xl p-6 mb-8 sm:absolute bottom-0 left-0 right-0 mx-auto sm:mx-4 max-w-4xl transform sm:-translate-y-8"
         >
           <h2 className="text-3xl font-bold text-orange-800 mb-4">
             ¡Bienvenidos a Nuestro Portal!
           </h2>
           <p className="text-xl text-gray-700 leading-relaxed">
-            Un espacio dedicado a nuestros queridos adultos mayores donde encontrarán información sobre actividades, eventos y servicios disponibles.
+             Un espacio dedicado a la Casa de los Abuelos "Angelica Alvarado". Encuentra información sobre actividades, eventos y servicios.
           </p>
         </motion.div>
       </section>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 mt-16">
         <motion.section
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="bg-white rounded-lg shadow-xl p-6 relative overflow-hidden"
         >
-          <img  alt="Actividades recreativas" className="absolute top-0 right-0 w-32 h-32 opacity-10" src="https://images.unsplash.com/photo-1658314755911-c9b6ae54459c" />
+          <img alt="Actividades recreativas en la casa de los abuelos" className="absolute top-0 right-0 w-32 h-32 opacity-10" src="https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/a459f83c5e73ddce1ba0375ff03959cf.jpg" />
           <h2 className="text-2xl font-bold text-orange-800 mb-4">
             Actividades Semanales
           </h2>
           <ul className="space-y-4 text-lg">
             <li className="flex items-center">
-              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
-              Ejercicios Matutinos - 8:00 AM
+              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
+              <span>Ejercicios Matutinos - 8:00 AM</span>
             </li>
             <li className="flex items-center">
-              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
-              Taller de Manualidades - 10:00 AM
+              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
+              <span>Taller de Manualidades - 10:00 AM</span>
             </li>
             <li className="flex items-center">
-              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
-              Bingo Social - 3:00 PM
+              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
+              <span>Bingo Social - 3:00 PM</span>
             </li>
           </ul>
         </motion.section>
@@ -74,22 +94,22 @@ function Home() {
           animate={{ opacity: 1, x: 0 }}
           className="bg-white rounded-lg shadow-xl p-6 relative overflow-hidden"
         >
-          <img  alt="Servicios médicos" className="absolute top-0 right-0 w-32 h-32 opacity-10" src="https://images.unsplash.com/photo-1576671081741-c538eafccfff" />
+          <img alt="Servicios disponibles en la casa de los abuelos" className="absolute top-0 right-0 w-32 h-32 opacity-10" src="https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/41fd9399f683290c8c712b05f8acbc2c.jpg" />
           <h2 className="text-2xl font-bold text-orange-800 mb-4">
             Servicios Disponibles
           </h2>
           <ul className="space-y-4 text-lg">
             <li className="flex items-center">
-              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
-              Atención Médica Básica
+              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
+              <span>Atención Médica Básica</span>
             </li>
             <li className="flex items-center">
-              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
-              Asesoría Nutricional
+              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
+              <span>Asesoría Nutricional</span>
             </li>
             <li className="flex items-center">
-              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
-              Apoyo Emocional
+              <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
+              <span>Apoyo Emocional y Compañía</span>
             </li>
           </ul>
         </motion.section>
@@ -101,7 +121,7 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-lg shadow-xl p-6"
         >
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
             <h2 className="text-2xl font-bold text-orange-800">
               Próximos Eventos
             </h2>
@@ -113,39 +133,58 @@ function Home() {
             </Button>
           </div>
 
-          <form id="addEventForm" className="hidden mb-6 space-y-4 bg-orange-50 p-4 rounded-lg">
+          <form id="addEventForm" onSubmit={handleAddEvent} className="hidden mb-6 space-y-4 bg-orange-50 p-4 rounded-lg border border-orange-200">
+            <h3 className="text-lg font-semibold text-orange-700">Nuevo Evento</h3>
             <div>
-              <label className="block text-sm font-medium mb-1">Título del Evento</label>
+              <label className="block text-sm font-medium mb-1 text-gray-700" htmlFor="eventTitle">Título del Evento</label>
               <input
+                id="eventTitle"
                 type="text"
                 value={newEvent.title}
                 onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
+                placeholder="Ej: Tarde de Dominó"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">Fecha y Hora</label>
+              <label className="block text-sm font-medium mb-1 text-gray-700" htmlFor="eventDate">Fecha y Hora</label>
               <input
+                 id="eventDate"
                 type="text"
                 value={newEvent.date}
                 onChange={(e) => setNewEvent({ ...newEvent, date: e.target.value })}
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
+                placeholder="Ej: Próximo Lunes - 4:00 PM"
               />
             </div>
-            <Button onClick={handleAddEvent} className="w-full bg-orange-600 hover:bg-orange-700">
+            <Button type="submit" className="w-full bg-orange-600 hover:bg-orange-700">
               Guardar Evento
             </Button>
           </form>
 
           <div className="space-y-4">
-            {events.map((event) => (
-              <div key={event.id} className="border-l-4 border-orange-500 pl-4">
-                <h3 className="text-xl font-semibold">{event.title}</h3>
-                <p className="text-gray-600">{event.date}</p>
-              </div>
-            ))}
+            {events.length > 0 ? (
+              events.map((event) => (
+                <motion.div 
+                  key={event.id} 
+                  className="border-l-4 border-orange-500 pl-4 py-2 bg-orange-50 rounded"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  layout
+                >
+                  <h3 className="text-xl font-semibold text-orange-900">{event.title}</h3>
+                  <p className="text-gray-600">{event.date}</p>
+                </motion.div>
+              ))
+            ) : (
+              <p className="text-gray-500 text-center py-4">No hay eventos programados por el momento.</p>
+            )}
           </div>
         </motion.div>
+      </section>
+
+      <section className="mt-12">
+        <InstagramFeed />
       </section>
 
       <section className="mt-12">
@@ -154,11 +193,11 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-lg shadow-xl p-6"
         >
-          <h2 className="text-2xl font-bold text-orange-800 mb-6">Galería de Momentos</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <img  alt="Momento especial 1" className="w-full h-48 object-cover rounded-lg" src="https://images.unsplash.com/photo-1669152581590-d54fda5a67de" />
-            <img  alt="Momento especial 2" className="w-full h-48 object-cover rounded-lg" src="https://images.unsplash.com/photo-1585462990001-041a9bb108a8" />
-            <img  alt="Momento especial 3" className="w-full h-48 object-cover rounded-lg" src="https://images.unsplash.com/photo-1675461089439-c3ac8ae595b7" />
+          <h2 className="text-2xl font-bold text-orange-800 mb-6 text-center">Galería de Momentos</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+             <img alt="Adultos mayores compartiendo en Casa de los Abuelos Angelica Alvarado 1" className="w-full h-56 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105" src="https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/addc31b077211c815ff27093852e1b4c.jpg" />
+             <img alt="Adultos mayores compartiendo en Casa de los Abuelos Angelica Alvarado 2" className="w-full h-56 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105" src="https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/41eefde62741a36abca36d7be5deed34.jpg" />
+             <img alt="Adultos mayores compartiendo en Casa de los Abuelos Angelica Alvarado 3" className="w-full h-56 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105" src="https://storage.googleapis.com/hostinger-horizons-assets-prod/620e205f-83ad-4326-a0da-0453e4e12ae9/6cc3c8121ed7ff12af06047851cff0e9.jpg" />
           </div>
         </motion.div>
       </section>

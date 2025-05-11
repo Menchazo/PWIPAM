@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
+import DevelopmentInfo from "@/pages/DevelopmentInfo";
 
 function App() {
   return (
@@ -20,13 +21,14 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/development-info" element={<DevelopmentInfo />} />
           </Routes>
         </main>
 
         <footer className="bg-orange-800 text-white py-6 mt-12">
           <div className="container mx-auto px-4 text-center">
             <p className="text-lg">
-              Casa de los Abuelos - Pantano Abajo
+              Casa de los Abuelos "Angelica Alvarado" - Pantano Abajo
             </p>
             <p className="mt-2">
               Parroquia Santa Ana, Municipio Miranda, Estado Falcón
