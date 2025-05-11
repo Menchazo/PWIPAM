@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 function About() {
   const teamMembers = [
-    { name: "Ana García", role: "Coordinadora", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" },
-    { name: "Carlos Mendoza", role: "Voluntario Principal", image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" },
-    { name: "Luisa Pérez", role: "Enfermera", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" },
-    { name: "Pedro Rodríguez", role: "Profesor de Manualidades", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" },
+    { name: "Ana García", role: "Coordinadora", image: "" },
+    { name: "Carlos Mendoza", role: "Voluntario Principal", image: "" },
+    { name: "Luisa Pérez", role: "Enfermera", image: "" },
+    { name: "Pedro Rodríguez", role: "Profesor de Manualidades", image: "" },
   ];
 
   const programmers = [

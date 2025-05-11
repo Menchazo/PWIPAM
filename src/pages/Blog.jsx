@@ -17,9 +17,9 @@ import {
   DialogClose
 } from "@/components/ui/dialog";
 import { PlusCircle } from 'lucide-react';
-import Imagen1 from "./img/1.jpeg";
-import Imagen2 from "./img/2.jpeg";
-import Imagen3 from "./img/3.jpeg";
+import Imagen1 from "./1.jpeg";
+import Imagen2 from "./2.jpeg";
+import Imagen3 from "./3.jpeg";
 
 function Blog() {
   const { toast } = useToast();
