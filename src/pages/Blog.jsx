@@ -63,7 +63,7 @@ function Blog() {
       date: "15 de Mayo, 2025",
       excerpt: "Una hermosa celebración donde homenajeamos a todas las madres de nuestra casa...",
       description: "Celebración día de las madres con flores y decoración",
-      imageSrc: "https://i.imgur.com/Ah9XWM0.jpeg"
+      imageSrc: "/img/Image1.jpeg"
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ function Blog() {
       date: "10 de Mayo, 2025",
       excerpt: "Nuestros abuelos aprendieron nuevas técnicas de tejido en un ambiente divertido...",
       description: "Grupo de adultos mayores aprendiendo a tejer",
-      imageSrc: "https://i.imgur.com/qdyZ7QN.jpeg"
+      imageSrc: "/img/Image2.jpeg"
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ function Blog() {
       date: "5 de Mayo, 2025",
       excerpt: "Una maravillosa experiencia en contacto con la naturaleza...",
       description: "Grupo de adultos mayores disfrutando de un día en el parque",
-      imageSrc: "https://i.imgur.com/qPWNFGM.jpeg"
+      imageSrc: "/img/Image3.jpeg"
     }
   ];
 
@@ -192,7 +192,7 @@ function Blog() {
               <img  
                 alt={post.description}
                 className="w-full h-48 object-cover"
-                src={post.imageSrc || "https://images.unsplash.com/photo-1697256200022-f61abccad430"} />
+                src={post.imageSrc || "https://i.imgur.com/Ah9XWM0.jpeg"} />
               <div className="p-6 flex flex-col flex-grow">
                 <h2 className="text-xl font-bold text-orange-800 mb-2">{post.title}</h2>
                 <p className="text-gray-500 text-sm mb-4">{post.date}</p>
