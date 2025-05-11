@@ -9,7 +9,7 @@ function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between items-center">
           <Link to="/" className="text-2xl font-bold flex items-center mb-2 sm:mb-0">
-            <img  alt="Logo Casa de los Abuelos" className="w-12 h-12 mr-3 rounded-full" src={Image} />
+            <img  alt="Logo Casa de los Abuelos" className="w-12 h-12 mr-3 rounded-full" src= "https://www.uptag.net/siace-uptag/activos/img/componentes/comun/logos/broca_uptag_blanco.png" />
             Casa de los Abuelos "Angelica Alvarez"
           </Link>
           {/* Use ml-auto to push links to the right on larger screens */}
