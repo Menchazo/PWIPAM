@@ -2,13 +2,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 function Navbar() {
   return (
     <nav className="bg-orange-600 text-white py-4 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between items-center">
           <Link to="/" className="text-2xl font-bold flex items-center mb-2 sm:mb-0">
-            <img  alt="Logo Casa de los Abuelos" className="w-12 h-12 mr-3 rounded-full" src= "" />
+            <img  alt="Logo Casa de los Abuelos" className="w-12 h-12 mr-3 rounded-full" src= "https://hdwallpaperim.com/wp-content/uploads/2017/08/25/461264-reactJS-Facebook-JavaScript-minimalism-artwork-simple_background-748x421.jpg" />
             Casa de los Abuelos "Angelica Alvarez"
           </Link>
           {/* Use ml-auto to push links to the right on larger screens */}
