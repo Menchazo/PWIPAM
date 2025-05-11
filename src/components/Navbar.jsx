@@ -8,8 +8,8 @@ function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between items-center">
           <Link to="/" className="text-2xl font-bold flex items-center mb-2 sm:mb-0">
-            <img  alt="Logo Casa de los Abuelos" className="w-12 h-12 mr-3 rounded-full" src="https://images.unsplash.com/photo-1674079886765-02db7c3919d5" />
-            Casa de los Abuelos
+            <img  alt="Logo Casa de los Abuelos" className="w-12 h-12 mr-3 rounded-full" src="./images/favicon.png" />
+            Casa de los Abuelos "Angelica Alvarez"
           </Link>
           {/* Use ml-auto to push links to the right on larger screens */}
           <div className="flex space-x-2 sm:space-x-4 text-base sm:text-lg flex-wrap justify-center md:ml-auto">

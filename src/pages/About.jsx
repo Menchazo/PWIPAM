@@ -11,7 +11,8 @@ function About() {
   ];
 
   const programmers = [
-     { name: "Tu Nombre / Nombre del Equipo", role: "Desarrollador(es) Web", image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" },
+     { name: "Juliangie Ventura", role: "Desarrollador Web", image: "" },
+     { name: "Gladys Morles", role: "Desarrollador Web", image: "" },
   ];
 
   return (
@@ -23,7 +24,7 @@ function About() {
       >
         <h1 className="text-4xl font-bold text-orange-800 mb-4">Sobre Nosotros</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Conoce más sobre la misión, visión y el equipo detrás de la Casa de los Abuelos "Angelica Alvarado".
+          Conoce más sobre la misión, visión y el equipo detrás de la Casa de los Abuelos "Angelica Alvarado" y el Club de la Tercera Edad.
         </p>
       </motion.div>
 
@@ -33,9 +34,21 @@ function About() {
         transition={{ delay: 0.1 }}
         className="mb-12 bg-white rounded-lg shadow-xl p-8"
       >
+        <h2 className="text-3xl font-bold text-orange-700 mb-4">Nuestra Historia</h2>
+        <p className="text-lg text-gray-700 leading-relaxed">
+        El Club de la Tercera Edad, tiene como sede La Casa de los Abuelos “Angélica Alvarado”, sector Pantano Abajo, donde se integra al Adulto Mayor con la comunidad, incentivándolos a realizar tareas referidas a  situaciones de su entorno, con capacidad para desarrollar actividades referentes a nuevas acciones para  su bienestar y buen vivir.  Este Club lleva por nombre “Mis  Años Dorados", el cual fue fundado el  22  de  Octubre  de  1997;  por un grupo de personas del servicio de Promoción  Social  del  Ambulatorio “Dr. Edgar Peña” y  el  Departamento  de  Gerontología   de  la Alcaldía  del  Municipio  Miranda, con  una  directiva  que estaba  presidida  por  el  señor  Luis  Figueredo (difunto),Carlos Romero (difunto), José Ramírez, Enrique García, y Elva de Pachano, Juvenal Medina,  luego este club pasa a tener sede propia  la cual le designa el nombre de: La Casa de los Abuelos “Angélica  Alvarado”, en referencia y honor a  una señora que a su corto paso, dejo una bonita labor social y perteneció a la familia Sierra Ramírez, vecinos de sector, luego esta casa paso a ser adquisición de ASOAVI, para ser utilizada únicamente por el circulo de la tercera edad.
+        </p>
+      </motion.section>
+
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="mb-12 bg-white rounded-lg shadow-xl p-8"
+      >
         <h2 className="text-3xl font-bold text-orange-700 mb-4">Nuestra Misión</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          Ofrecer un espacio seguro, acogedor y lleno de actividades significativas para los adultos mayores de la comunidad de Pantano Abajo, promoviendo su bienestar físico, mental y social. Buscamos ser un segundo hogar donde se sientan valorados, activos y conectados.
+          Servir como un refugio donde la soledad se disipa, dando paso a la camaradería y el apoyo mutuo. A través de una gama diversa de actividades recreativas, culturales y educativas, buscando mantener a sus miembros activos, tanto física como mentalmente, fomentando un envejecimiento saludable y enriquecedor. Estableciendo preservación de la identidad cultural local como un pilar fundamental, transmitiendo tradiciones y costumbres a las nuevas generaciones. En esencia, crear un entorno seguro, acogedor y respetuoso, donde cada adulto mayor se sienta valorado, escuchado y atendido, contribuyendo así a su felicidad y calidad de vida
         </p>
       </motion.section>
 
@@ -47,7 +60,7 @@ function About() {
       >
         <h2 className="text-3xl font-bold text-orange-700 mb-4">Nuestra Visión</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          Ser un centro de referencia en el cuidado y atención integral del adulto mayor en el Municipio Miranda, reconocido por la calidad humana de nuestro equipo, la variedad de nuestros programas y el impacto positivo en la vida de nuestros abuelos y sus familias.
+          Consolidarse como un referente indiscutible en la atención integral del adulto mayor dentro de la región; creando así un espacio donde la dignidad, el respeto y la alegría sean los estándares primordiales, donde cada miembro encuentre un hogar lejos de la soledad. Visibilizando un club vibrante, lleno de actividades enriquecedoras que estimulen la mente y el cuerpo, fomentando un envejecimiento activo y saludable. Reconocido por su compromiso con la preservación de la cultura local , fortaleciendo así el sentido de identidad y pertenencia. A demás de ser un ejemplo a seguir, un modelo de excelencia en la atención del adulto mayor, donde la comunidad se una en un abrazo solidario para brindarles a sus mayores el cuidado y el amor que merecen.
         </p>
       </motion.section>
       

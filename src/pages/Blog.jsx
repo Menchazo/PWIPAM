@@ -63,7 +63,7 @@ function Blog() {
       date: "15 de Mayo, 2025",
       excerpt: "Una hermosa celebración donde homenajeamos a todas las madres de nuestra casa...",
       description: "Celebración día de las madres con flores y decoración",
-      imageSrc: "https://images.unsplash.com/photo-1528194669613-3e68cd768697?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODcwMDB8MHwxfHNlYXJjaHwxMnx8ZWxkZXJseSUyMGNlbGVicmF0aW9ufGVufDB8MHx8fDE3MTQ4OTc5OTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" // Example relevant image
+      imageSrc: "./img/1.jpeg" 
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ function Blog() {
       date: "10 de Mayo, 2025",
       excerpt: "Nuestros abuelos aprendieron nuevas técnicas de tejido en un ambiente divertido...",
       description: "Grupo de adultos mayores aprendiendo a tejer",
-      imageSrc: "https://images.unsplash.com/photo-1591800090363-086205475041?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODcwMDB8MHwxfHNlYXJjaHwzfHxrnit0aW5nJTIwZWxkZXJseXxlbnwwfDB8fHwxNzE0ODk4MDQwfDA&ixlib=rb-4.0.3&q=80&w=1080" // Example relevant image
+      imageSrc: "./img/2.jpeg" 
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ function Blog() {
       date: "5 de Mayo, 2025",
       excerpt: "Una maravillosa experiencia en contacto con la naturaleza...",
       description: "Grupo de adultos mayores disfrutando de un día en el parque",
-      imageSrc: "https://images.unsplash.com/photo-1504687798438-37528714488d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODcwMDB8MHwxfHNlYXJjaHw0fHxlbGRlcmx5JTIwb3V0ZG9vcnN8ZW58MHwwfHx8MTcxNDg5ODE0NXww&ixlib=rb-4.0.3&q=80&w=1080" // Example relevant image
+      imageSrc: "./img/3.jpeg"
     }
   ];
 
