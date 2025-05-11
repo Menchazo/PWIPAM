@@ -63,7 +63,7 @@ function Blog() {
       date: "15 de Mayo, 2025",
       excerpt: "Una hermosa celebración donde homenajeamos a todas las madres de nuestra casa...",
       description: "Celebración día de las madres con flores y decoración",
-      imageSrc: "https://via.placeholder.com/400"
+      imageSrc: "https://i.imgur.com/Ah9XWM0.jpeg"
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ function Blog() {
       date: "10 de Mayo, 2025",
       excerpt: "Nuestros abuelos aprendieron nuevas técnicas de tejido en un ambiente divertido...",
       description: "Grupo de adultos mayores aprendiendo a tejer",
-      imageSrc: "https://via.placeholder.com/400"
+      imageSrc: "https://i.imgur.com/qdyZ7QN.jpeg"
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ function Blog() {
       date: "5 de Mayo, 2025",
       excerpt: "Una maravillosa experiencia en contacto con la naturaleza...",
       description: "Grupo de adultos mayores disfrutando de un día en el parque",
-      imageSrc: "https://via.placeholder.com/400"
+      imageSrc: "https://i.imgur.com/qPWNFGM.jpeg"
     }
   ];
 
