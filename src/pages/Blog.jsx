@@ -17,6 +17,9 @@ import {
   DialogClose
 } from "@/components/ui/dialog";
 import { PlusCircle } from 'lucide-react';
+import Imagen1 from "./img/1.jpeg";
+import Imagen2 from "./img/2.jpeg";
+import Imagen3 from "./img/3.jpeg";
 
 function Blog() {
   const { toast } = useToast();
@@ -63,7 +66,7 @@ function Blog() {
       date: "15 de Mayo, 2025",
       excerpt: "Una hermosa celebración donde homenajeamos a todas las madres de nuestra casa...",
       description: "Celebración día de las madres con flores y decoración",
-      imageSrc: "/img/1.jpeg" 
+      imageSrc: Imagen1 
     },
     {
       id: 2,
@@ -71,7 +74,7 @@ function Blog() {
       date: "10 de Mayo, 2025",
       excerpt: "Nuestros abuelos aprendieron nuevas técnicas de tejido en un ambiente divertido...",
       description: "Grupo de adultos mayores aprendiendo a tejer",
-      imageSrc: "/img/2.jpeg" 
+      imageSrc: Imagen2
     },
     {
       id: 3,
@@ -79,7 +82,7 @@ function Blog() {
       date: "5 de Mayo, 2025",
       excerpt: "Una maravillosa experiencia en contacto con la naturaleza...",
       description: "Grupo de adultos mayores disfrutando de un día en el parque",
-      imageSrc: "/img/3.jpeg"
+      imageSrc: Imagen3
     }
   ];
 
